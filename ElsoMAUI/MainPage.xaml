@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElsoMAUI.MainPage">
+
+    <FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceAround">
+
+        <Entry x:Name="eName" 
+               Placeholder="Az Ön neve"
+               MinimumWidthRequest="200"
+               MaximumWidthRequest="300"/>
+
+        <Picker x:Name="pAge"
+                Title="Az Ön életkora"
+                MinimumWidthRequest="200"
+                WidthRequest="200"/>
+
+        <Picker x:Name="pGender"
+                Title="Az Ön neme"
+                MinimumWidthRequest="200"
+                WidthRequest="200"/>
+
+        <Button x:Name="btnReg"
+                Text="Regisztráció"
+                Clicked="btnReg_Clicked"
+                MinimumWidthRequest="200"
+                BackgroundColor="DarkGreen"
+                BorderColor="White"
+                TextColor="White"/>
+
+        <Label x:Name="lblUser"/>
+
+    </FlexLayout>
+
+</ContentPage>
