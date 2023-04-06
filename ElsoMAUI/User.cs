@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElsoMAUI
 {
-    class User
+    public class User
     {
         public string Name { get; private set; }
         public int Age { get; private set; }

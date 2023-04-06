@@ -19,6 +19,7 @@ public partial class MainPage : ContentPage
     private void GenderSetup()
     {
         pGender.ItemsSource = new List<string>() { "férfi", "nő" };
+        pGender.SelectedIndex = 0;
     }
 
     /// <summary>
@@ -51,7 +52,8 @@ public partial class MainPage : ContentPage
         else
         {
             registeredUser = new User(eName.Text, (int)pAge.SelectedItem, pGender.SelectedItem.Equals("férfi"));
-            lblUser.Text = registeredUser.ToString();
+            await Navigation.PushAsync(new PageRegistered(registeredUser)); //Visszaléphető page
+            //await Navigation.PushModalAsync(new PageRegistered(registeredUser)); //Nem visszaléphető page, azaz modal
         }
     }
     
